@@ -12,13 +12,13 @@ const Header = () => {
     <header className="relative pt-5 pb-10 max-w-2xl mx-auto flex justify-between items-center">
       <div>
         <Link href="/">
-          <a className="text-3xl font-bold">Lark Chat</a>
+          <a className="text-3xl font-bold text-indigo-500">Lark Chat</a>
         </Link>
       </div>
 
       <nav>
         {loading && <p>Validating session...</p>}
-        {!session && (
+        {!loading && !session && (
           <button onClick={() => signIn()} className="text-xl">
             Sign In
           </button>
